@@ -6,7 +6,14 @@ const OUT_DIR = 'prof'
 let files = [
   // './src/forLoops.js',
   // './src/emitters.js',
-  './src/fs-extra.js'
+  // './src/fs-extra.js',
+  // './src/object-copy.js',
+  // './src/restify.js',
+  // './src/winston.js',
+  './src/winston3.js',
+  // './src/sockets.js',
+  // './src/bunyan.js',
+  // './src/streams.js',
 ]
 
 for (file of files) {

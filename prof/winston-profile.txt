@@ -1,0 +1,716 @@
+Statistical profiling result from prof/winston.isolate.log, (731 ticks, 25 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     10    1.4%          /usr/lib/system/libsystem_pthread.dylib
+      2    0.3%          /usr/lib/system/libsystem_c.dylib
+      1    0.1%          /usr/lib/system/libsystem_platform.dylib
+      1    0.1%          /usr/lib/system/libsystem_malloc.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     11    1.5%    1.5%  Builtin: InterpreterEntryTrampoline
+      7    1.0%    1.0%  Builtin: KeyedStoreIC_Megamorphic
+      4    0.5%    0.6%  LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      4    0.5%    0.6%  LazyCompile: ~Writable.write _stream_writable.js:268:36
+      4    0.5%    0.6%  LazyCompile: *clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:100:15
+      4    0.5%    0.6%  Builtin: KeyedLoadIC
+      4    0.5%    0.6%  Builtin: CallFunction_ReceiverIsAny
+      3    0.4%    0.4%  Stub: StringAddStub
+      3    0.4%    0.4%  LazyCompile: ~write buffer.js:897:40
+      3    0.4%    0.4%  LazyCompile: ~target.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:51:30
+      3    0.4%    0.4%  LazyCompile: ~byteLength buffer.js:508:20
+      3    0.4%    0.4%  LazyCompile: ~Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      3    0.4%    0.4%  LazyCompile: ~File._write /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:200:33
+      3    0.4%    0.4%  LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      3    0.4%    0.4%  Builtin: StoreIC
+      3    0.4%    0.4%  Builtin: Call_ReceiverIsAny
+      2    0.3%    0.3%  LazyCompile: ~exports.serialize /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:321:30
+      2    0.3%    0.3%  LazyCompile: ~File.open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:369:32
+      2    0.3%    0.3%  LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:179:24
+      2    0.3%    0.3%  LazyCompile: *writeOrBuffer _stream_writable.js:360:23
+      2    0.3%    0.3%  LazyCompile: *exports.serialize /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:321:30
+      2    0.3%    0.3%  LazyCompile: *derez /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:46:27
+      2    0.3%    0.3%  LazyCompile: *afterWriteDispatched internal/stream_base_commons.js:73:30
+      2    0.3%    0.3%  Builtin: StrictEqual
+      2    0.3%    0.3%  Builtin: RegExpReplace
+      2    0.3%    0.3%  Builtin: KeyedStoreIC
+      2    0.3%    0.3%  Builtin: ForInEnumerate {1}
+      2    0.3%    0.3%  Builtin: Construct {1}
+      2    0.3%    0.3%  Builtin: ArrayIndexOfSmiOrObject
+      2    0.3%    0.3%  Builtin: ArgumentsAdaptorTrampoline
+      1    0.1%    0.1%  Stub: StoreFastElementStub
+      1    0.1%    0.1%  RegExp: mtUtil.js
+      1    0.1%    0.1%  LazyCompile: ~writeOrBuffer _stream_writable.js:360:23
+      1    0.1%    0.1%  LazyCompile: ~setInterval /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:64:32
+      1    0.1%    0.1%  LazyCompile: ~pushAsyncIds internal/async_hooks.js:389:22
+      1    0.1%    0.1%  LazyCompile: ~ontimeout timers.js:420:19
+      1    0.1%    0.1%  LazyCompile: ~onCorkedFinish _stream_writable.js:660:24
+      1    0.1%    0.1%  LazyCompile: ~normalizeString path.js:57:25
+      1    0.1%    0.1%  LazyCompile: ~nextTick internal/process/next_tick.js:96:20
+      1    0.1%    0.1%  LazyCompile: ~isUint8Array internal/util/types.js:28:22
+      1    0.1%    0.1%  LazyCompile: ~isFull internal/fixed_queue.js:67:9
+      1    0.1%    0.1%  LazyCompile: ~isEmpty internal/fixed_queue.js:63:10
+      1    0.1%    0.1%  LazyCompile: ~getDefaultTriggerAsyncId internal/async_hooks.js:270:34
+      1    0.1%    0.1%  LazyCompile: ~fromString buffer.js:333:20
+      1    0.1%    0.1%  LazyCompile: ~from buffer.js:199:28
+      1    0.1%    0.1%  LazyCompile: ~format util.js:169:16
+      1    0.1%    0.1%  LazyCompile: ~exports.clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:79:26
+      1    0.1%    0.1%  LazyCompile: ~emit events.js:140:44
+      1    0.1%    0.1%  LazyCompile: ~doWrite _stream_writable.js:400:17
+      1    0.1%    0.1%  LazyCompile: ~decodeChunk _stream_writable.js:338:21
+      1    0.1%    0.1%  LazyCompile: ~clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:100:15
+      1    0.1%    0.1%  LazyCompile: ~TickObject internal/process/next_tick.js:74:16
+      1    0.1%    0.1%  LazyCompile: ~Socket._writeGeneric net.js:731:42
+      1    0.1%    0.1%  LazyCompile: ~FastBuffer buffer.js:79:1
+      1    0.1%    0.1%  LazyCompile: *fromString buffer.js:333:20
+      1    0.1%    0.1%  LazyCompile: *exports.clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:79:26
+      1    0.1%    0.1%  LazyCompile: *afterWrite _stream_writable.js:476:20
+      1    0.1%    0.1%  LazyCompile: *Writable.write _stream_writable.js:268:36
+      1    0.1%    0.1%  LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1    0.1%    0.1%  Builtin: TypedArrayInitializeWithBuffer
+      1    0.1%    0.1%  Builtin: StringPrototypeIndexOf
+      1    0.1%    0.1%  Builtin: RegExpMatchFast
+      1    0.1%    0.1%  Builtin: RegExpExecAtom
+      1    0.1%    0.1%  Builtin: MapPrototypeSet
+      1    0.1%    0.1%  Builtin: LoadIC_Uninitialized
+      1    0.1%    0.1%  Builtin: LoadIC_Noninlined
+      1    0.1%    0.1%  Builtin: LoadIC
+      1    0.1%    0.1%  Builtin: KeyedLoadICTrampoline
+      1    0.1%    0.1%  Builtin: InterpreterPushArgsThenCall
+      1    0.1%    0.1%  Builtin: Divide
+      1    0.1%    0.1%  Builtin: CompileLazy
+      1    0.1%    0.1%  Builtin: ArrayPrototypeSlice
+      1    0.1%    0.1%  Builtin: AdaptorWithBuiltinExitFrame
+
+ [C++]:
+   ticks  total  nonlib   name
+     88   12.0%   12.3%  t v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+     36    4.9%    5.0%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     29    4.0%    4.0%  T v8::internal::SourcePositionTableIterator::Advance()
+     25    3.4%    3.5%  T ___channel_get_opt
+     19    2.6%    2.6%  T void node::StreamBase::JSMethod<node::LibuvStreamWrap, &(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+     16    2.2%    2.2%  T v8::internal::JSReceiver::GetConstructorName(v8::internal::Handle<v8::internal::JSReceiver>)
+     13    1.8%    1.8%  t v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+     13    1.8%    1.8%  T _mprotect
+     10    1.4%    1.4%  T v8::internal::JSStackFrame::GetMethodName()
+      9    1.2%    1.3%  T v8::internal::Factory::NewConsString(v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::String>, int, bool)
+      7    1.0%    1.0%  t void v8::internal::String::WriteToFlat<unsigned char>(v8::internal::String*, unsigned char*, int, int)
+      7    1.0%    1.0%  T void v8::internal::LookupIterator::Start<false>()
+      6    0.8%    0.8%  T v8::internal::TranslatedState::CreateNextTranslatedValue(int, v8::internal::TranslationIterator*, v8::internal::FixedArray*, unsigned char*, v8::internal::RegisterValues*, __sFILE*)
+      6    0.8%    0.8%  T v8::internal::AbstractCode::SourcePosition(int)
+      6    0.8%    0.8%  T _munmap
+      5    0.7%    0.7%  t _szone_malloc_should_clear
+      5    0.7%    0.7%  t __enlarge
+      5    0.7%    0.7%  T v8::internal::Script::GetPositionInfo(int, v8::internal::Script::PositionInfo*, v8::internal::Script::OffsetFlag) const
+      5    0.7%    0.7%  T v8::internal::JSStackFrame::ToString()
+      5    0.7%    0.7%  T v8::internal::Factory::NewFixedArrayWithFiller(v8::internal::Heap::RootListIndex, int, v8::internal::Object*, v8::internal::PretenureFlag)
+      4    0.5%    0.6%  t v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObjectReference**, v8::internal::HeapObject*)
+      4    0.5%    0.6%  t v8::internal::LookupIterator::LookupIterator(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::LookupIterator::Configuration)
+      4    0.5%    0.6%  t v8::internal::JsonStringifier::Result v8::internal::JsonStringifier::Serialize_<false>(v8::internal::Handle<v8::internal::Object>, bool, v8::internal::Handle<v8::internal::Object>)
+      4    0.5%    0.6%  t node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.5%    0.6%  t __malloc_initialize
+      4    0.5%    0.6%  T v8::internal::LookupIterator::FetchValue() const
+      4    0.5%    0.6%  T v8::internal::JSStackFrame::HasScript() const
+      4    0.5%    0.6%  T v8::internal::JSReceiver::class_name()
+      4    0.5%    0.6%  T v8::internal::IncrementalMarking::WhiteToGreyAndPush(v8::internal::HeapObject*)
+      4    0.5%    0.6%  T v8::internal::Factory::NewConsString(v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::String>)
+      4    0.5%    0.6%  T _mach_vm_purgable_control
+      3    0.4%    0.4%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.4%    0.4%  t v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::LookupIterator::Configuration)
+      3    0.4%    0.4%  t node::GetBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.4%    0.4%  t ___vfprintf
+      3    0.4%    0.4%  T v8::internal::compiler::AccessInfoFactory::ComputePropertyAccessInfo(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Name>, v8::internal::compiler::AccessMode, v8::internal::compiler::PropertyAccessInfo*)
+      3    0.4%    0.4%  T v8::internal::TranslatedState::Init(unsigned char*, v8::internal::TranslationIterator*, v8::internal::FixedArray*, v8::internal::RegisterValues*, __sFILE*, int)
+      3    0.4%    0.4%  T v8::internal::JsonStringifier::SerializeString(v8::internal::Handle<v8::internal::String>)
+      3    0.4%    0.4%  T v8::internal::JSObject::MigrateToMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, int)
+      3    0.4%    0.4%  T v8::internal::Factory::NumberToString(v8::internal::Handle<v8::internal::Object>, bool)
+      3    0.4%    0.4%  T v8::internal::Factory::NewRawOneByteString(int, v8::internal::PretenureFlag)
+      3    0.4%    0.4%  T v8::internal::ErrorUtils::FormatStackTrace(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Object>)
+      2    0.3%    0.3%  t void std::__1::vector<v8::internal::FrameSummary, std::__1::allocator<v8::internal::FrameSummary> >::__push_back_slow_path<v8::internal::FrameSummary>(v8::internal::FrameSummary&&)
+      2    0.3%    0.3%  t v8::internal::PagedSpace::is_local()
+      2    0.3%    0.3%  t v8::internal::(anonymous namespace)::GetFastEnumPropertyKeys(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSObject>)
+      2    0.3%    0.3%  t v8::internal::(anonymous namespace)::FrameArrayBuilder::IsVisibleInStackTrace(v8::internal::Handle<v8::internal::JSFunction>)
+      2    0.3%    0.3%  t _szone_pressure_relief
+      2    0.3%    0.3%  t _small_free_list_remove_ptr_no_clear
+      2    0.3%    0.3%  t __cxxabiv1::do_free(void*)
+      2    0.3%    0.3%  T v8::internal::TranslatedState::TranslatedState(v8::internal::JavaScriptFrame const*)
+      2    0.3%    0.3%  T v8::internal::TranslatedState::EnsureJSObjectAllocated(v8::internal::TranslatedValue*, v8::internal::Handle<v8::internal::Map>)
+      2    0.3%    0.3%  T v8::internal::TranslatedFrame::Handlify()
+      2    0.3%    0.3%  T v8::internal::String::IndexOf(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::String>, int)
+      2    0.3%    0.3%  T v8::internal::StackGuard::PushPostponeInterruptsScope(v8::internal::PostponeInterruptsScope*)
+      2    0.3%    0.3%  T v8::internal::SeqString::Truncate(v8::internal::Handle<v8::internal::SeqString>, int)
+      2    0.3%    0.3%  T v8::internal::RegExpResultsCache::Enter(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::FixedArray>, v8::internal::Handle<v8::internal::FixedArray>, v8::internal::RegExpResultsCache::ResultsCacheType)
+      2    0.3%    0.3%  T v8::internal::JavaScriptFrame::IsConstructor() const
+      2    0.3%    0.3%  T v8::internal::IncrementalMarking::Step(unsigned long, v8::internal::IncrementalMarking::CompletionAction, v8::internal::StepOrigin, v8::internal::WorklistToProcess)
+      2    0.3%    0.3%  T v8::internal::Heap::AllocateRawWithRetry(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      2    0.3%    0.3%  T v8::internal::FlatStringReader::PostGarbageCollection()
+      2    0.3%    0.3%  T v8::internal::Factory::NewJSArray(v8::internal::ElementsKind, v8::internal::PretenureFlag)
+      2    0.3%    0.3%  T v8::internal::Factory::GetNumberStringCache(v8::internal::Handle<v8::internal::Object>)
+      2    0.3%    0.3%  T v8::internal::ElementsAccessor::Concat(v8::internal::Isolate*, v8::internal::Arguments*, unsigned int, unsigned int)
+      2    0.3%    0.3%  T v8::internal::BuiltinDeserializer::ExtractCodeObjectSize(int)
+      2    0.3%    0.3%  T _mach_msg_overwrite
+      2    0.3%    0.3%  T __simple_dprintf
+      1    0.1%    0.1%  t void v8::internal::LookupIterator::NextInternal<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+      1    0.1%    0.1%  t v8::internal::interpreter::BytecodeGenerator::VisitNoStackOverflowCheck(v8::internal::AstNode*)
+      1    0.1%    0.1%  t v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce(v8::internal::compiler::Node*)
+      1    0.1%    0.1%  t v8::internal::Worklist<std::__1::pair<v8::internal::HeapObject*, int>, 256>::Pop(int, std::__1::pair<v8::internal::HeapObject*, int>*)
+      1    0.1%    0.1%  t v8::internal::PrototypeIterator::Advance()
+      1    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParsePrimaryExpression(bool*, bool*)
+      1    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseMemberExpressionContinuation(v8::internal::Expression*, bool*, bool*)
+      1    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseBlock(v8::internal::ZoneList<v8::internal::AstRawString const*>*, bool*)
+      1    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseArguments(v8::internal::Scanner::Location*, bool, bool*, bool*)
+      1    0.1%    0.1%  t v8::internal::MaybeHandle<v8::internal::Object> v8::internal::(anonymous namespace)::HandleApiCallHelper<true>(v8::internal::Isolate*, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::FunctionTemplateInfo>, v8::internal::Handle<v8::internal::Object>, v8::internal::BuiltinArguments)
+      1    0.1%    0.1%  t v8::internal::KeywordOrIdentifierToken(unsigned char const*, int)
+      1    0.1%    0.1%  t v8::internal::HashTable<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::Rehash(v8::internal::NameDictionary*)
+      1    0.1%    0.1%  t v8::internal::Builtin_Impl_ArrayConcat(v8::internal::BuiltinArguments, v8::internal::Isolate*)
+      1    0.1%    0.1%  t v8::internal::(anonymous namespace)::Fast_ArrayConcat(v8::internal::Isolate*, v8::internal::BuiltinArguments*)
+      1    0.1%    0.1%  t v8::internal::(anonymous namespace)::AddDescriptorsByTemplate(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::NameDictionary>, v8::internal::Handle<v8::internal::NumberDictionary>, v8::internal::Handle<v8::internal::FixedArray>, v8::internal::Handle<v8::internal::JSObject>, bool, v8::internal::Arguments&)
+      1    0.1%    0.1%  t v8::internal::(anonymous namespace)::AddDescriptorsByTemplate(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::DescriptorArray>, v8::internal::Handle<v8::internal::NumberDictionary>, v8::internal::Handle<v8::internal::JSObject>, v8::internal::Arguments&)
+      1    0.1%    0.1%  t v8::base::TemplateHashMapEntry<void*, void*>* v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::internal::ZoneAllocationPolicy>::LookupOrInsert<v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::internal::ZoneAllocationPolicy>::LookupOrInsert(void* const&, unsigned int, v8::internal::ZoneAllocationPolicy)::'lambda'()>(void* const&, unsigned int, v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::internal::ZoneAllocationPolicy>::LookupOrInsert(void* const&, unsigned int, v8::internal::ZoneAllocationPolicy)::'lambda'() const&, v8::internal::ZoneAllocationPolicy)
+      1    0.1%    0.1%  t std::__1::vector<v8::internal::SourcePosition, v8::internal::ZoneAllocator<v8::internal::SourcePosition> >::__append(unsigned long, v8::internal::SourcePosition const&)
+      1    0.1%    0.1%  t std::__1::deque<v8::internal::TranslatedState::ObjectPosition, std::__1::allocator<v8::internal::TranslatedState::ObjectPosition> >::__add_back_capacity()
+      1    0.1%    0.1%  t std::__1::deque<int, std::__1::allocator<int> >::__add_back_capacity()
+      1    0.1%    0.1%  t std::__1::__hash_table<std::__1::__hash_value_type<v8::internal::AllocationSite*, unsigned long>, std::__1::__unordered_map_hasher<v8::internal::AllocationSite*, std::__1::__hash_value_type<v8::internal::AllocationSite*, unsigned long>, std::__1::hash<v8::internal::AllocationSite*>, true>, std::__1::__unordered_map_equal<v8::internal::AllocationSite*, std::__1::__hash_value_type<v8::internal::AllocationSite*, unsigned long>, std::__1::equal_to<v8::internal::AllocationSite*>, true>, std::__1::allocator<std::__1::__hash_value_type<v8::internal::AllocationSite*, unsigned long> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<v8::internal::AllocationSite*, unsigned long>, void*>*)
+      1    0.1%    0.1%  t node::fs::WriteBuffers(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t _tiny_malloc_from_free_list
+      1    0.1%    0.1%  t _allocate_pages_securely
+      1    0.1%    0.1%  t _allocate_pages
+      1    0.1%    0.1%  t ___printf_arginfo_chr
+      1    0.1%    0.1%  t ___collate_equiv_value
+      1    0.1%    0.1%  T void v8::internal::EvacuateVisitorBase::RawMigrateObject<(v8::internal::EvacuateVisitorBase::MigrationMode)1>(v8::internal::EvacuateVisitorBase*, v8::internal::HeapObject*, v8::internal::HeapObject*, int, v8::internal::AllocationSpace)
+      1    0.1%    0.1%  T v8::internal::interpreter::BytecodeRegisterOptimizer::PrepareOutputRegister(v8::internal::interpreter::Register)
+      1    0.1%    0.1%  T v8::internal::interpreter::BytecodeArrayBuilder::LoadAccumulatorWithRegister(v8::internal::interpreter::Register)
+      1    0.1%    0.1%  T v8::internal::interpreter::BytecodeArrayAccessor::GetRegisterOperand(int) const
+      1    0.1%    0.1%  T v8::internal::compiler::StateValuesCache::BuildTree(unsigned long*, v8::internal::compiler::Node**, unsigned long, v8::internal::BitVector const*, int, unsigned long)
+      1    0.1%    0.1%  T v8::internal::compiler::SourcePositionTable::GetSourcePosition(v8::internal::compiler::Node*) const
+      1    0.1%    0.1%  T v8::internal::compiler::SimplifiedOperatorReducer::Reduce(v8::internal::compiler::Node*)
+      1    0.1%    0.1%  T v8::internal::compiler::OperatorProperties::HasFrameStateInput(v8::internal::compiler::Operator const*)
+      1    0.1%    0.1%  T v8::internal::compiler::LiveRangeBuilder::ProcessInstructions(v8::internal::compiler::InstructionBlock const*, v8::internal::BitVector*)
+      1    0.1%    0.1%  T v8::internal::compiler::GraphTrimmer::TrimGraph()
+      1    0.1%    0.1%  T v8::internal::compiler::GraphReducer::ReduceTop()
+      1    0.1%    0.1%  T v8::internal::compiler::GraphReducer::Reduce(v8::internal::compiler::Node*)
+      1    0.1%    0.1%  T v8::internal::compiler::CommonOperatorBuilder::EffectPhi(int)
+      1    0.1%    0.1%  T v8::internal::compiler::CommonOperatorBuilder::Branch(v8::internal::compiler::BranchHint, v8::internal::compiler::IsSafetyCheck)
+      1    0.1%    0.1%  T v8::internal::compiler::BytecodeLivenessMap::InitializeLiveness(int, int, v8::internal::Zone*)
+      1    0.1%    0.1%  T v8::internal::compiler::BitsetType::Lub(double, double)
+      1    0.1%    0.1%  T v8::internal::Zone::New(unsigned long)
+      1    0.1%    0.1%  T v8::internal::V8::GetCurrentPlatform()
+      1    0.1%    0.1%  T v8::internal::String::GetFlatContent()
+      1    0.1%    0.1%  T v8::internal::StackFrame::GetCallerState(v8::internal::StackFrame::State*) const
+      1    0.1%    0.1%  T v8::internal::SharedFunctionInfo::DebugName()
+      1    0.1%    0.1%  T v8::internal::Script::InitLineEnds(v8::internal::Handle<v8::internal::Script>)
+      1    0.1%    0.1%  T v8::internal::Script::GetColumnNumber(v8::internal::Handle<v8::internal::Script>, int)
+      1    0.1%    0.1%  T v8::internal::ScopeInfo::HasFunctionName() const
+      1    0.1%    0.1%  T v8::internal::Scope::Scope(v8::internal::Zone*, v8::internal::Scope*, v8::internal::ScopeType)
+      1    0.1%    0.1%  T v8::internal::Scope::LookupRecursive(v8::internal::ParseInfo*, v8::internal::VariableProxy*, v8::internal::Scope*)
+      1    0.1%    0.1%  T v8::internal::Scope::AsDeclarationScope()
+      1    0.1%    0.1%  T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.1%  T v8::internal::Runtime_RemoveArrayHoles(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.1%  T v8::internal::RegExpStackScope::~RegExpStackScope()
+      1    0.1%    0.1%  T v8::internal::RegExpImpl::IrregexpExecRaw(v8::internal::Handle<v8::internal::JSRegExp>, v8::internal::Handle<v8::internal::String>, int, int*, int)
+      1    0.1%    0.1%  T v8::internal::RegExpImpl::IrregexpExec(v8::internal::Handle<v8::internal::JSRegExp>, v8::internal::Handle<v8::internal::String>, int, v8::internal::Handle<v8::internal::RegExpMatchInfo>)
+      1    0.1%    0.1%  T v8::internal::NewSpace::AddFreshPage()
+      1    0.1%    0.1%  T v8::internal::Map::WeakCellForMap(v8::internal::Handle<v8::internal::Map>)
+      1    0.1%    0.1%  T v8::internal::Map::GetOrCreatePrototypeChainValidityCell(v8::internal::Handle<v8::internal::Map>, v8::internal::Isolate*)
+      1    0.1%    0.1%  T v8::internal::Logger::ApiObjectAccess(char const*, v8::internal::JSObject*)
+      1    0.1%    0.1%  T v8::internal::Logger::ApiEntryCall(char const*)
+      1    0.1%    0.1%  T v8::internal::LayoutDescriptor::IsTagged(int, int, int*)
+      1    0.1%    0.1%  T v8::internal::JsonStringifier::Stringify(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>)
+      1    0.1%    0.1%  T v8::internal::JsonStringifier::SerializeSmi(v8::internal::Smi*)
+      1    0.1%    0.1%  T v8::internal::JsonStringifier::JsonStringifier(v8::internal::Isolate*)
+      1    0.1%    0.1%  T v8::internal::JSStackFrame::IsToplevel()
+      1    0.1%    0.1%  T v8::internal::JSStackFrame::IsNative()
+      1    0.1%    0.1%  T v8::internal::JSReceiver::SetProperties(v8::internal::HeapObject*)
+      1    0.1%    0.1%  T v8::internal::JSObject::GetElementsAccessor()
+      1    0.1%    0.1%  T v8::internal::JSFunction::GetName(v8::internal::Handle<v8::internal::JSFunction>)
+      1    0.1%    0.1%  T v8::internal::Isolate::CaptureSimpleStackTrace(v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::FrameSkipMode, v8::internal::Handle<v8::internal::Object>)
+      1    0.1%    0.1%  T v8::internal::IsMoreGeneralElementsKindTransition(v8::internal::ElementsKind, v8::internal::ElementsKind)
+      1    0.1%    0.1%  T v8::internal::InnerPointerToCodeCache::GetCacheEntry(unsigned char*)
+      1    0.1%    0.1%  T v8::internal::IncrementalStringBuilder::IncrementalStringBuilder(v8::internal::Isolate*)
+      1    0.1%    0.1%  T v8::internal::IncrementalStringBuilder::Finish()
+      1    0.1%    0.1%  T v8::internal::IncrementalStringBuilder::Extend()
+      1    0.1%    0.1%  T v8::internal::IncrementalStringBuilder::AppendString(v8::internal::Handle<v8::internal::String>)
+      1    0.1%    0.1%  T v8::internal::IdentityMapBase::LookupOrInsert(v8::internal::Object*)
+      1    0.1%    0.1%  T v8::internal::Heap::Scavenge()
+      1    0.1%    0.1%  T v8::internal::Heap::CreateFillerObjectAt(unsigned char*, int, v8::internal::ClearRecordedSlots, v8::internal::ClearFreedMemoryMode)
+      1    0.1%    0.1%  T v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::Rehash(v8::internal::StringTable*)
+      1    0.1%    0.1%  T v8::internal::FlatStringReader::FlatStringReader(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>)
+      1    0.1%    0.1%  T v8::internal::Factory::NewOneByteInternalizedString(v8::internal::Vector<unsigned char const>, unsigned int)
+      1    0.1%    0.1%  T v8::internal::Factory::NewMap(v8::internal::InstanceType, int, v8::internal::ElementsKind, int)
+      1    0.1%    0.1%  T v8::internal::Factory::NewJSArrayStorage(v8::internal::Handle<v8::internal::JSArray>, int, int, v8::internal::ArrayStorageAllocationMode)
+      1    0.1%    0.1%  T v8::internal::Factory::NewFeedbackMetadata(int)
+      1    0.1%    0.1%  T v8::internal::Factory::InitializeMap(v8::internal::Map*, v8::internal::InstanceType, int, v8::internal::ElementsKind, int)
+      1    0.1%    0.1%  T v8::internal::Factory::CopyJSObjectWithAllocationSite(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::AllocationSite>)
+      1    0.1%    0.1%  T v8::internal::EscapeRegExpSource(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>)
+      1    0.1%    0.1%  T v8::internal::ErrorUtils::ToString(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>)
+      1    0.1%    0.1%  T v8::internal::Deserializer<v8::internal::DefaultDeserializerAllocator>::ReadData(v8::internal::MaybeObject**, v8::internal::MaybeObject**, int, unsigned char*)
+      1    0.1%    0.1%  T v8::internal::Deserializer<v8::internal::BuiltinDeserializerAllocator>::ReadData(v8::internal::MaybeObject**, v8::internal::MaybeObject**, int, unsigned char*)
+      1    0.1%    0.1%  T v8::internal::DescriptorArray::GeneralizeAllFields()
+      1    0.1%    0.1%  T v8::internal::DeclarationScope::AllocateScopeInfos(v8::internal::ParseInfo*, v8::internal::Isolate*, v8::internal::AnalyzeMode)
+      1    0.1%    0.1%  T v8::internal::DateCache::YearMonthDayFromDays(int, int*, int*, int*)
+      1    0.1%    0.1%  T v8::internal::ConvertToUpper(v8::internal::Handle<v8::internal::String>, v8::internal::Isolate*)
+      1    0.1%    0.1%  T v8::internal::ContextSlotCache::Lookup(v8::internal::Object*, v8::internal::String*, v8::internal::VariableMode*, v8::internal::InitializationFlag*, v8::internal::MaybeAssignedFlag*)
+      1    0.1%    0.1%  T v8::internal::Builtin_ErrorConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.1%  T v8::base::RecursiveMutex::Lock()
+      1    0.1%    0.1%  T v8::Value::ToString(v8::Isolate*) const
+      1    0.1%    0.1%  T v8::V8::GlobalizeReference(v8::internal::Isolate*, v8::internal::Object**)
+      1    0.1%    0.1%  T unibrow::Utf8Iterator::operator++()
+      1    0.1%    0.1%  T node::fs::NewFSReqWrap(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::StringBytes::StorageSize(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+      1    0.1%    0.1%  T node::AsyncWrap::MakeCallback(v8::Local<v8::Function>, int, v8::Local<v8::Value>*)
+      1    0.1%    0.1%  T _vm_region_recurse_64
+      1    0.1%    0.1%  T _mach_msg_server
+      1    0.1%    0.1%  T _free
+      1    0.1%    0.1%  T ___mach_stack_logging_frames_for_uniqued_stack
+      1    0.1%    0.1%  T ___mach_stack_logging_enumerate_records
+      1    0.1%    0.1%  T ___carbon_delete
+      1    0.1%    0.1%  T _CRYPTO_atomic_add
+
+ [Summary]:
+   ticks  total  nonlib   name
+    136   18.6%   19.0%  JavaScript
+    556   76.1%   77.5%  C++
+     23    3.1%    3.2%  GC
+     14    1.9%          Shared libraries
+     25    3.4%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     86   17.2%   11.8%  t v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+     70   14.0%    9.6%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     51   10.2%    7.0%  T v8::internal::Builtin_ErrorConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+     29    5.8%    4.0%  T v8::internal::SourcePositionTableIterator::Advance()
+     29    5.8%    4.0%  T v8::internal::Builtin_JsonStringify(int, v8::internal::Object**, v8::internal::Isolate*)
+     20    4.0%    2.7%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+     19    3.8%    2.6%  T v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+     16    3.2%    2.2%  T v8::internal::JSReceiver::GetConstructorName(v8::internal::Handle<v8::internal::JSReceiver>)
+     15    3.0%    2.1%  T v8::internal::Runtime_StringSplit(int, v8::internal::Object**, v8::internal::Isolate*)
+     10    2.0%    1.4%  T v8::internal::JSStackFrame::GetMethodName()
+      9    1.8%    1.2%  T v8::internal::Factory::NewConsString(v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::String>, int, bool)
+      9    1.8%    1.2%  T v8::internal::Builtin_DatePrototypeToISOString(int, v8::internal::Object**, v8::internal::Isolate*)
+      7    1.4%    1.0%  t v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      7    1.4%    1.0%  T void v8::internal::LookupIterator::Start<false>()
+      6    1.2%    0.8%  T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+      6    1.2%    0.8%  T v8::internal::AbstractCode::SourcePosition(int)
+      5    1.0%    0.7%  T v8::internal::Script::GetPositionInfo(int, v8::internal::Script::PositionInfo*, v8::internal::Script::OffsetFlag) const
+      5    1.0%    0.7%  T v8::internal::JSStackFrame::ToString()
+      4    0.8%    0.5%  T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    0.8%    0.5%  T v8::internal::LookupIterator::FetchValue() const
+      4    0.8%    0.5%  T v8::internal::JSStackFrame::HasScript() const
+      4    0.8%    0.5%  T v8::internal::JSReceiver::class_name()
+      4    0.8%    0.5%  T v8::internal::Factory::NewConsString(v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::String>)
+      3    0.6%    0.4%  t v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::LookupIterator::Configuration)
+      3    0.6%    0.4%  T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.6%    0.4%  T v8::internal::Runtime_RegExpExec(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.6%    0.4%  T v8::internal::IncrementalMarking::WhiteToGreyAndPush(v8::internal::HeapObject*)
+      3    0.6%    0.4%  T v8::internal::Factory::NumberToString(v8::internal::Handle<v8::internal::Object>, bool)
+      3    0.6%    0.4%  T v8::internal::ErrorUtils::FormatStackTrace(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Object>)
+      2    0.4%    0.3%  t v8::internal::LookupIterator::LookupIterator(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::LookupIterator::Configuration)
+      2    0.4%    0.3%  t v8::internal::(anonymous namespace)::GetFastEnumPropertyKeys(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSObject>)
+      2    0.4%    0.3%  T v8::internal::String::IndexOf(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::String>, int)
+      2    0.4%    0.3%  T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.4%    0.3%  T v8::internal::Runtime_KeyedStoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.4%    0.3%  T v8::internal::Runtime_DeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.4%    0.3%  T v8::internal::Runtime_DefineClass(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.4%    0.3%  T v8::internal::JSObject::MigrateToMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, int)
+      2    0.4%    0.3%  T v8::internal::FlatStringReader::PostGarbageCollection()
+      2    0.4%    0.3%  T v8::internal::Factory::NewRawOneByteString(int, v8::internal::PretenureFlag)
+      2    0.4%    0.3%  T v8::internal::Factory::GetNumberStringCache(v8::internal::Handle<v8::internal::Object>)
+      2    0.4%    0.3%  T v8::internal::Builtin_DateConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  t v8::internal::PrototypeIterator::Advance()
+      1    0.2%    0.1%  t v8::internal::Builtin_Impl_ArrayConcat(v8::internal::BuiltinArguments, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::SharedFunctionInfo::DebugName()
+      1    0.2%    0.1%  T v8::internal::SeqString::Truncate(v8::internal::Handle<v8::internal::SeqString>, int)
+      1    0.2%    0.1%  T v8::internal::Script::InitLineEnds(v8::internal::Handle<v8::internal::Script>)
+      1    0.2%    0.1%  T v8::internal::Script::GetColumnNumber(v8::internal::Handle<v8::internal::Script>, int)
+      1    0.2%    0.1%  T v8::internal::ScopeInfo::HasFunctionName() const
+      1    0.2%    0.1%  T v8::internal::Runtime_StackGuard(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::Runtime_SetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::Runtime_RemoveArrayHoles(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::Runtime_RegExpInitializeAndCompile(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::Runtime_KeyedGetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::OrderedHashMap::GetHash(v8::internal::Isolate*, v8::internal::Object*)
+      1    0.2%    0.1%  T v8::internal::NewSpace::AddFreshPage()
+      1    0.2%    0.1%  T v8::internal::JSStackFrame::IsToplevel()
+      1    0.2%    0.1%  T v8::internal::JSStackFrame::IsNative()
+      1    0.2%    0.1%  T v8::internal::JSFunction::GetName(v8::internal::Handle<v8::internal::JSFunction>)
+      1    0.2%    0.1%  T v8::internal::IncrementalStringBuilder::IncrementalStringBuilder(v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::IncrementalStringBuilder::Finish()
+      1    0.2%    0.1%  T v8::internal::IncrementalStringBuilder::Extend()
+      1    0.2%    0.1%  T v8::internal::IncrementalStringBuilder::AppendString(v8::internal::Handle<v8::internal::String>)
+      1    0.2%    0.1%  T v8::internal::Heap::CreateFillerObjectAt(unsigned char*, int, v8::internal::ClearRecordedSlots, v8::internal::ClearFreedMemoryMode)
+      1    0.2%    0.1%  T v8::internal::Heap::AllocateRawWithRetry(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      1    0.2%    0.1%  T v8::internal::FlatStringReader::FlatStringReader(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>)
+      1    0.2%    0.1%  T v8::internal::Factory::NewFixedArrayWithFiller(v8::internal::Heap::RootListIndex, int, v8::internal::Object*, v8::internal::PretenureFlag)
+      1    0.2%    0.1%  T v8::internal::Factory::InitializeMap(v8::internal::Map*, v8::internal::InstanceType, int, v8::internal::ElementsKind, int)
+      1    0.2%    0.1%  T v8::internal::ErrorUtils::ToString(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>)
+      1    0.2%    0.1%  T v8::internal::DescriptorArray::GeneralizeAllFields()
+      1    0.2%    0.1%  T v8::internal::Builtin_StringPrototypeToUpperCaseIntl(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::Builtin_ObjectSetPrototypeOf(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::Builtin_ObjectDefineProperties(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::internal::Builtin_JsonParse(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.2%    0.1%  T v8::Value::ToString(v8::Isolate*) const
+      1    0.2%    0.1%  T v8::V8::GlobalizeReference(v8::internal::Isolate*, v8::internal::Object**)
+      1    0.2%    0.1%  T unibrow::Utf8Iterator::operator++()
+      1    0.2%    0.1%  T node::StringBytes::StorageSize(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+      1    0.2%    0.1%  T _mach_msg_server
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     88   12.0%  t v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+     44   50.0%    LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+     44  100.0%      LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+     44  100.0%        LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+     44  100.0%          LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+     27   61.4%            LazyCompile: *winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+     17   38.6%            LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+     37   42.0%    LazyCompile: ~getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+     37  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+     24   64.9%        LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+     23   95.8%          LazyCompile: ~File.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:127:31
+     23  100.0%            LazyCompile: ~transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1    4.2%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+     13   35.1%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+     13  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+     13  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      5    5.7%    LazyCompile: *getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      5  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      5  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      5  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      5  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1    1.1%    T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~clearBuffer _stream_writable.js:495:21
+      1  100.0%        LazyCompile: ~onwrite _stream_writable.js:445:17
+      1  100.0%          LazyCompile: ~<anonymous> internal/fs/streams.js:320:45
+      1  100.0%            LazyCompile: ~wrapper internal/fs/streams.js:290:19
+      1    1.1%    T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~tryCreateBuffer fs.js:318:25
+      1  100.0%        LazyCompile: ~readFileSync fs.js:345:22
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:711:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:603:33
+
+     36    4.9%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     36  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     27   75.0%      LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+     27  100.0%        LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:129:34
+      4   14.8%          Script: ~<anonymous> fs.js:1:11
+      4  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      4   14.8%          Script: ~<anonymous> crypto.js:1:11
+      4  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      3   11.1%          Script: ~<anonymous> stream.js:1:11
+      3  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      3   11.1%          LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      3  100.0%            Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:15:30
+      2    7.4%          Script: ~<anonymous> util.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      2    7.4%          Script: ~<anonymous> assert.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      2    7.4%          LazyCompile: ~setupGlobalVariables internal/bootstrap/node.js:297:32
+      2  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      2    7.4%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:502:24
+      2  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:642:36
+      1    3.7%          Script: ~<anonymous> internal/async_hooks.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    3.7%          Script: ~<anonymous> buffer.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    3.7%          LazyCompile: ~setupProcessFatal internal/bootstrap/node.js:424:29
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      1    3.7%          LazyCompile: ~setupGlobalTimeouts internal/bootstrap/node.js:346:31
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      1    3.7%          LazyCompile: ~createWritableStdioStream internal/process/stdio.js:163:35
+      1  100.0%            LazyCompile: ~getStdout internal/process/stdio.js:21:21
+      9   25.0%      LazyCompile: ~Script vm.js:38:14
+      9  100.0%        LazyCompile: ~createScript vm.js:245:22
+      9  100.0%          LazyCompile: ~runInThisContext vm.js:294:26
+      9  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:663:37
+
+     29    4.0%  T v8::internal::SourcePositionTableIterator::Advance()
+     14   48.3%    LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+     14  100.0%      LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+     14  100.0%        LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+     14  100.0%          LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      9   64.3%            LazyCompile: *winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      5   35.7%            LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+     12   41.4%    LazyCompile: ~getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+     12  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      6   50.0%        LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      5   83.3%          LazyCompile: ~File.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:127:31
+      5  100.0%            LazyCompile: ~transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1   16.7%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      6   50.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      6  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      6  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      3   10.3%    LazyCompile: *getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      3  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      3  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      3  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      3  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+
+     25    3.4%  UNKNOWN
+      2    8.0%    T v8::internal::Builtin_ErrorConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      LazyCompile: ~getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      1  100.0%        LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%          LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%            LazyCompile: ~File.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:127:31
+      1   50.0%      LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      2    8.0%    LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      2  100.0%      LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      2  100.0%        LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      2  100.0%          LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1   50.0%            LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      1   50.0%            LazyCompile: *winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      2    8.0%    LazyCompile: *getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      2  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      2  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      2  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      2  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1    4.0%    T v8::internal::Runtime_StringSplit(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Builtin: StringPrototypeSplit
+      1  100.0%        LazyCompile: ~setupProcessICUVersions internal/bootstrap/node.js:478:35
+      1  100.0%          LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      1  100.0%            Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:15:30
+      1    4.0%    T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Script: ~<anonymous> console.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1  100.0%          LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:129:34
+      1  100.0%            LazyCompile: ~setupGlobalConsole internal/bootstrap/node.js:356:30
+      1    4.0%    T v8::internal::Builtin_StringPrototypeToUpperCaseIntl(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1    4.0%    LazyCompile: ~getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      1  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%        LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%          LazyCompile: ~File.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:127:31
+      1  100.0%            LazyCompile: ~transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1    4.0%    LazyCompile: *writeGeneric internal/stream_base_commons.js:67:22
+      1  100.0%      LazyCompile: ~Socket._writeGeneric net.js:731:42
+      1  100.0%        LazyCompile: ~Socket._write net.js:768:35
+      1  100.0%          LazyCompile: *writeOrBuffer _stream_writable.js:360:23
+      1  100.0%            LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+
+     25    3.4%  T ___channel_get_opt
+
+     19    2.6%  T void node::StreamBase::JSMethod<node::LibuvStreamWrap, &(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+     19  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     19  100.0%      LazyCompile: ~handleWriteReq internal/stream_base_commons.js:9:24
+     19  100.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:67:22
+     19  100.0%          LazyCompile: ~Socket._writeGeneric net.js:731:42
+     19  100.0%            LazyCompile: ~Socket._write net.js:768:35
+
+     16    2.2%  T v8::internal::JSReceiver::GetConstructorName(v8::internal::Handle<v8::internal::JSReceiver>)
+      6   37.5%    LazyCompile: ~getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      6  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      4   66.7%        LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      4  100.0%          LazyCompile: ~File.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:127:31
+      4  100.0%            LazyCompile: ~transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      2   33.3%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      2  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      2  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      6   37.5%    LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      6  100.0%      LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      6  100.0%        LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      6  100.0%          LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      3   50.0%            LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      3   50.0%            LazyCompile: *winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      4   25.0%    LazyCompile: *getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      4  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      4  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      4  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      4  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+
+     13    1.8%  t v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      3   23.1%    T v8::internal::Builtin_JsonStringify(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   66.7%      LazyCompile: *derez /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:46:27
+      1   50.0%        LazyCompile: ~decycle /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:24:33
+      1  100.0%          LazyCompile: ~exports.clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:79:26
+      1  100.0%            LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1   50.0%        LazyCompile: *derez /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:46:27
+      1  100.0%          LazyCompile: ~decycle /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:24:33
+      1  100.0%            LazyCompile: ~exports.clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:79:26
+      1   33.3%      LazyCompile: ~derez /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:46:27
+      1  100.0%        LazyCompile: ~decycle /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:24:33
+      1  100.0%          LazyCompile: ~exports.clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:79:26
+      1  100.0%            LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      3   23.1%    LazyCompile: ~getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      3  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      2   66.7%        LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      2  100.0%          LazyCompile: ~File.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:127:31
+      2  100.0%            LazyCompile: ~transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1   33.3%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      3   23.1%    LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      3  100.0%      LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      3  100.0%        LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      3  100.0%          LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      3  100.0%            LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      2   15.4%    T v8::internal::Runtime_StringSplit(int, v8::internal::Object**, v8::internal::Isolate*)
+      2  100.0%      Builtin: StringPrototypeSplit
+      1   50.0%        LazyCompile: ~getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      1  100.0%          LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%            LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1   50.0%        LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%          LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%            LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1    7.7%    T v8::internal::Builtin_ErrorConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1    7.7%    LazyCompile: *getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      1  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+
+     13    1.8%  T _mprotect
+      3   23.1%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   33.3%      Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/config.js:1:11
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:663:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:711:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:603:33
+      1   33.3%      LazyCompile: ~writeOrBuffer _stream_writable.js:360:23
+      1  100.0%        LazyCompile: ~Writable.write _stream_writable.js:268:36
+      1  100.0%          LazyCompile: ~Console.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/console.js:91:34
+      1  100.0%            LazyCompile: ~transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1   33.3%      LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+      1  100.0%        LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
+      1  100.0%          LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      1  100.0%            Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:15:30
+      1    7.7%    T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~createWriteStream fs.js:1719:27
+      1  100.0%        LazyCompile: ~createAndFlush /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:475:29
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:539:32
+      1  100.0%            LazyCompile: ~<anonymous> fs.js:157:18
+      1    7.7%    T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~binding internal/bootstrap/loaders.js:74:39
+      1  100.0%        Script: ~bootstrapInternalLoaders internal/bootstrap/loaders.js:42:35
+
+     11    1.5%  Builtin: InterpreterEntryTrampoline
+      2   18.2%    LazyCompile: ~setInterval /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:64:32
+      2  100.0%      LazyCompile: ~ontimeout timers.js:420:19
+      2  100.0%        LazyCompile: ~tryOnTimeout timers.js:281:22
+      2  100.0%          LazyCompile: ~listOnTimeout timers.js:215:23
+      2  100.0%            LazyCompile: ~processTimers timers.js:209:23
+      2   18.2%    LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1   50.0%      LazyCompile: ~File.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:127:31
+      1  100.0%        LazyCompile: ~transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/async/lib/async.js:156:29
+      1  100.0%            LazyCompile: ~_each /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/async/lib/async.js:52:26
+      1   50.0%      LazyCompile: ~Console.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/console.js:91:34
+      1  100.0%        LazyCompile: ~transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/async/lib/async.js:156:29
+      1  100.0%            LazyCompile: ~_each /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/async/lib/async.js:52:26
+      1    9.1%    LazyCompile: ~from buffer.js:199:28
+      1  100.0%      LazyCompile: ~decodeChunk _stream_writable.js:338:21
+      1  100.0%        LazyCompile: ~writeOrBuffer _stream_writable.js:360:23
+      1  100.0%          LazyCompile: ~Writable.write _stream_writable.js:268:36
+      1  100.0%            LazyCompile: ~File._write /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:200:33
+      1    9.1%    LazyCompile: ~finish /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:186:18
+      1  100.0%      LazyCompile: ~done /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/async/lib/async.js:159:22
+      1  100.0%        LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/async/lib/async.js:37:24
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:234:46
+      1  100.0%            LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:203:50
+      1    9.1%    LazyCompile: ~Socket._write net.js:768:35
+      1  100.0%      LazyCompile: *writeOrBuffer _stream_writable.js:360:23
+      1  100.0%        LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%          LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1  100.0%            LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      1    9.1%    LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/async/lib/async.js:37:24
+      1  100.0%      LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:234:46
+      1  100.0%        LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:203:50
+      1  100.0%          LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+      1    9.1%    LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%      LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1  100.0%        LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      1  100.0%          LazyCompile: ~target.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:51:30
+      1  100.0%            LazyCompile: ~setInterval /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:64:32
+      1    9.1%    LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%      LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%        LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1  100.0%          LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      1  100.0%            LazyCompile: ~target.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:51:30
+      1    9.1%    LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1  100.0%      LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      1  100.0%        LazyCompile: ~target.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:51:30
+      1  100.0%          LazyCompile: ~setInterval /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:64:32
+      1  100.0%            LazyCompile: ~ontimeout timers.js:420:19
+
+     10    1.4%  T v8::internal::JSStackFrame::GetMethodName()
+      8   80.0%    LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      8  100.0%      LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      8  100.0%        LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      8  100.0%          LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      5   62.5%            LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      3   37.5%            LazyCompile: *winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      2   20.0%    LazyCompile: ~getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      2  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      2  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      2  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      2  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+
+     10    1.4%  /usr/lib/system/libsystem_pthread.dylib
+      5   50.0%    T v8::internal::Builtin_JsonStringify(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   40.0%      LazyCompile: *derez /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:46:27
+      2  100.0%        LazyCompile: ~decycle /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:24:33
+      2  100.0%          LazyCompile: ~exports.clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:79:26
+      2  100.0%            LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1   20.0%      LazyCompile: ~derez /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:46:27
+      1  100.0%        LazyCompile: ~decycle /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:24:33
+      1  100.0%          LazyCompile: ~exports.clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:79:26
+      1  100.0%            LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1   20.0%      LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1   20.0%      LazyCompile: *decycle /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/cycle/cycle.js:24:33
+      1  100.0%        LazyCompile: ~exports.clone /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:79:26
+      1  100.0%          LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%            LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1   10.0%    T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Script: ~<anonymous> internal/encoding.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1  100.0%          LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:129:34
+      1  100.0%            Script: ~<anonymous> util.js:1:11
+      1   10.0%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/async/lib/async.js:8:11
+      1  100.0%        Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/async/lib/async.js:1:11
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:663:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:711:37
+      1   10.0%    LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      1  100.0%      LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%        LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%          LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      1  100.0%            LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+
+      9    1.2%  T v8::internal::Factory::NewConsString(v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::String>, int, bool)
+      5   55.6%    LazyCompile: *logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      5  100.0%      LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      5  100.0%        LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      5  100.0%          LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+      4   80.0%            LazyCompile: *winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      1   20.0%            LazyCompile: ~winston.(anonymous function) /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston.js:85:30
+      4   44.4%    LazyCompile: ~getLogSource /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:22:22
+      4  100.0%      LazyCompile: ~logFileFormatter /Users/danvilla/Projects/collinear/nodejs-profiling/src/winston.js:3:26
+      3   75.0%        LazyCompile: ~exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      3  100.0%          LazyCompile: ~File.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/transports/file.js:127:31
+      3  100.0%            LazyCompile: ~transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1   25.0%        LazyCompile: *exports.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/common.js:142:24
+      1  100.0%          LazyCompile: *transportLog /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:232:24
+      1  100.0%            LazyCompile: *Logger.log /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/winston/lib/winston/logger.js:109:33
+

@@ -5,7 +5,8 @@ const OUT_DIR = 'prof'
 
 let files = [
   // './src/forLoops.js',
-  './src/emitters.js',
+  // './src/emitters.js',
+  './src/fs-extra.js'
 ]
 
 for (file of files) {

@@ -1,0 +1,324 @@
+Statistical profiling result from prof/fs-extra.isolate.log, (304 ticks, 5 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      3    1.0%          /usr/lib/system/libsystem_pthread.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    2.0%    2.0%  Builtin: InterpreterEntryTrampoline
+      4    1.3%    1.3%  Builtin: KeyedLoadIC
+      3    1.0%    1.0%  LazyCompile: ~runAsync /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:12:18
+      3    1.0%    1.0%  Builtin: StoreIC
+      3    1.0%    1.0%  Builtin: FastNewClosure
+      3    1.0%    1.0%  Builtin: Call_ReceiverIsAny
+      3    1.0%    1.0%  Builtin: ArgumentsAdaptorTrampoline
+      2    0.7%    0.7%  Stub: GetPropertyStub
+      2    0.7%    0.7%  LazyCompile: ~nextTick internal/process/next_tick.js:96:20
+      2    0.7%    0.7%  LazyCompile: *Writable.write _stream_writable.js:268:36
+      2    0.7%    0.7%  Builtin: CreateTypedArray
+      2    0.7%    0.7%  Builtin: CallFunction_ReceiverIsAny
+      1    0.3%    0.3%  Stub: ArraySingleArgumentConstructorStub
+      1    0.3%    0.3%  Script: ~<anonymous> _stream_writable.js:1:11
+      1    0.3%    0.3%  LazyCompile: ~writeOrBuffer _stream_writable.js:360:23
+      1    0.3%    0.3%  LazyCompile: ~writeFileSync fs.js:1165:23
+      1    0.3%    0.3%  LazyCompile: ~validatePath internal/fs/utils.js:326:22
+      1    0.3%    0.3%  LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:208:23
+      1    0.3%    0.3%  LazyCompile: ~shift internal/fixed_queue.js:76:8
+      1    0.3%    0.3%  LazyCompile: ~realpathSync fs.js:1356:22
+      1    0.3%    0.3%  LazyCompile: ~popAsyncIds internal/async_hooks.js:402:21
+      1    0.3%    0.3%  LazyCompile: ~open fs.js:411:14
+      1    0.3%    0.3%  LazyCompile: ~onCorkedFinish _stream_writable.js:660:24
+      1    0.3%    0.3%  LazyCompile: ~normalizeString path.js:57:25
+      1    0.3%    0.3%  LazyCompile: ~highWaterMarkFrom internal/streams/state.js:5:27
+      1    0.3%    0.3%  LazyCompile: ~handleErrorFromBinding fs.js:115:32
+      1    0.3%    0.3%  LazyCompile: ~fromString buffer.js:333:20
+      1    0.3%    0.3%  LazyCompile: ~emit events.js:140:44
+      1    0.3%    0.3%  LazyCompile: ~copyObject internal/fs/utils.js:45:20
+      1    0.3%    0.3%  LazyCompile: ~clearBuffer _stream_writable.js:495:21
+      1    0.3%    0.3%  LazyCompile: ~byteLength buffer.js:508:20
+      1    0.3%    0.3%  LazyCompile: ~alignPool buffer.js:131:19
+      1    0.3%    0.3%  LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+      1    0.3%    0.3%  LazyCompile: ~Writable _stream_writable.js:198:18
+      1    0.3%    0.3%  LazyCompile: ~Readable _stream_readable.js:144:18
+      1    0.3%    0.3%  LazyCompile: ~FastBuffer buffer.js:79:1
+      1    0.3%    0.3%  LazyCompile: ~EventEmitter.init events.js:67:29
+      1    0.3%    0.3%  LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:38:41
+      1    0.3%    0.3%  LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:208:53
+      1    0.3%    0.3%  LazyCompile: *write buffer.js:897:40
+      1    0.3%    0.3%  LazyCompile: *runAsync /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:12:18
+      1    0.3%    0.3%  LazyCompile: *open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:229:17
+      1    0.3%    0.3%  Builtin: StringPrototypeSlice
+      1    0.3%    0.3%  Builtin: JSEntryTrampoline
+      1    0.3%    0.3%  Builtin: InterpreterPushUndefinedAndArgsThenCall
+      1    0.3%    0.3%  Builtin: Call_ReceiverIsNullOrUndefined
+
+ [C++]:
+   ticks  total  nonlib   name
+     86   28.3%   28.6%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     28    9.2%    9.3%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    3.3%    3.3%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    2.0%    2.0%  T _mprotect
+      5    1.6%    1.7%  t v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObjectReference**, v8::internal::HeapObject*)
+      4    1.3%    1.3%  t node::fs::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    1.3%    1.3%  T node::fs::NewFSReqWrap(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.7%    0.7%  t v8::internal::MaybeHandle<v8::internal::Object> v8::internal::(anonymous namespace)::HandleApiCallHelper<false>(v8::internal::Isolate*, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::FunctionTemplateInfo>, v8::internal::Handle<v8::internal::Object>, v8::internal::BuiltinArguments)
+      2    0.7%    0.7%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.7%    0.7%  t node::GetBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.7%    0.7%  T v8::internal::compiler::GraphTrimmer::TrimGraph()
+      2    0.7%    0.7%  T v8::internal::LookupIterator::FetchValue() const
+      2    0.7%    0.7%  T v8::internal::Factory::NewFixedArrayWithFiller(v8::internal::Heap::RootListIndex, int, v8::internal::Object*, v8::internal::PretenureFlag)
+      2    0.7%    0.7%  T v8::internal::Factory::InitializeMap(v8::internal::Map*, v8::internal::InstanceType, int, v8::internal::ElementsKind, int)
+      2    0.7%    0.7%  T __simple_dprintf
+      1    0.3%    0.3%  t void v8::internal::String::WriteToFlat<unsigned short>(v8::internal::String*, unsigned short*, int, int)
+      1    0.3%    0.3%  t void v8::internal::String::WriteToFlat<unsigned char>(v8::internal::String*, unsigned char*, int, int)
+      1    0.3%    0.3%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.3%    0.3%  t v8::internal::interpreter::BytecodeGenerator::VisitNoStackOverflowCheck(v8::internal::AstNode*)
+      1    0.3%    0.3%  t v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce(v8::internal::compiler::Node*)
+      1    0.3%    0.3%  t v8::internal::ParserBase<v8::internal::Parser>::CheckDestructuringElement(v8::internal::Expression*, int, int)
+      1    0.3%    0.3%  t v8::internal::LocalAllocator::AllocateInLAB(int, v8::internal::AllocationAlignment)
+      1    0.3%    0.3%  t v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      1    0.3%    0.3%  t v8::internal::FunctionCallbackArguments::Call(v8::internal::CallHandlerInfo*)
+      1    0.3%    0.3%  t v8::internal::ConsString* v8::internal::String::VisitFlat<v8::Utf8LengthHelper::Visitor>(v8::Utf8LengthHelper::Visitor*, v8::internal::String*, int)
+      1    0.3%    0.3%  t v8::internal::Builtin_Impl_HandleApiCall(v8::internal::BuiltinArguments, v8::internal::Isolate*)
+      1    0.3%    0.3%  t v8::internal::(anonymous namespace)::ProbeInstantiationsCache(v8::internal::Isolate*, int, v8::internal::(anonymous namespace)::CachingMode)
+      1    0.3%    0.3%  t v8::internal::(anonymous namespace)::FinalizeUnoptimizedCode(v8::internal::ParseInfo*, v8::internal::Isolate*, v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::UnoptimizedCompilationJob*, std::__1::forward_list<std::__1::unique_ptr<v8::internal::UnoptimizedCompilationJob, std::__1::default_delete<v8::internal::UnoptimizedCompilationJob> >, std::__1::allocator<std::__1::unique_ptr<v8::internal::UnoptimizedCompilationJob, std::__1::default_delete<v8::internal::UnoptimizedCompilationJob> > > >*)
+      1    0.3%    0.3%  t std::__1::locale::__imp::__imp(std::__1::locale::__imp const&)
+      1    0.3%    0.3%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      1    0.3%    0.3%  t std::__1::__hash_iterator<std::__1::__hash_node<node::Environment::CleanupHookCallback, void*>*> std::__1::__hash_table<node::Environment::CleanupHookCallback, node::Environment::CleanupHookCallback::Hash, node::Environment::CleanupHookCallback::Equal, std::__1::allocator<node::Environment::CleanupHookCallback> >::find<node::Environment::CleanupHookCallback>(node::Environment::CleanupHookCallback const&)
+      1    0.3%    0.3%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.3%    0.3%  t node::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.3%    0.3%  t _unwind_stack_from_table_index
+      1    0.3%    0.3%  t _szone_malloc_should_clear
+      1    0.3%    0.3%  t _small_free_list_remove_ptr_no_clear
+      1    0.3%    0.3%  t __malloc_initialize
+      1    0.3%    0.3%  t ___vfprintf
+      1    0.3%    0.3%  T v8::internal::interpreter::ConstantArrayBuilder::InsertIteratorSymbol()
+      1    0.3%    0.3%  T v8::internal::interpreter::BytecodeArrayBuilder::CallProperty(v8::internal::interpreter::Register, v8::internal::interpreter::RegisterList, int)
+      1    0.3%    0.3%  T v8::internal::interpreter::BytecodeArrayAccessor::current_bytecode_size() const
+      1    0.3%    0.3%  T v8::internal::compiler::SourcePositionTable::GetSourcePosition(v8::internal::compiler::Node*) const
+      1    0.3%    0.3%  T v8::internal::compiler::Schedule::PlanNode(v8::internal::compiler::BasicBlock*, v8::internal::compiler::Node*)
+      1    0.3%    0.3%  T v8::internal::compiler::NodeCache<long long, v8::base::hash<long long>, std::__1::equal_to<long long> >::Find(v8::internal::Zone*, long long)
+      1    0.3%    0.3%  T v8::internal::compiler::Node::New(v8::internal::Zone*, unsigned int, v8::internal::compiler::Operator const*, int, v8::internal::compiler::Node* const*, bool)
+      1    0.3%    0.3%  T v8::internal::compiler::LiveRangeConnector::ResolveControlFlow(v8::internal::Zone*)
+      1    0.3%    0.3%  T v8::internal::compiler::GraphReducer::ReduceTop()
+      1    0.3%    0.3%  T v8::internal::compiler::DeadCodeElimination::Reduce(v8::internal::compiler::Node*)
+      1    0.3%    0.3%  T v8::internal::compiler::BytecodeAnalysis::IsLoopHeader(int) const
+      1    0.3%    0.3%  T v8::internal::StringToDouble(v8::internal::UnicodeCache*, v8::internal::Handle<v8::internal::String>, int, double)
+      1    0.3%    0.3%  T v8::internal::Statement::IsJump() const
+      1    0.3%    0.3%  T v8::internal::ScopeInfo::HasSharedFunctionName() const
+      1    0.3%    0.3%  T v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)
+      1    0.3%    0.3%  T v8::internal::Scanner::ScanIdentifierOrKeywordInner(v8::internal::Scanner::LiteralScope*)
+      1    0.3%    0.3%  T v8::internal::Scanner::Scan()
+      1    0.3%    0.3%  T v8::internal::Runtime_CompleteInobjectSlackTrackingForMap(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.3%    0.3%  T v8::internal::Runtime_CompileForOnStackReplacement(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.3%    0.3%  T v8::internal::RootIndexMap::RootIndexMap(v8::internal::Isolate*)
+      1    0.3%    0.3%  T v8::internal::Parser::Declare(v8::internal::Declaration*, v8::internal::ParserBase<v8::internal::Parser>::DeclarationDescriptor::Kind, v8::internal::VariableMode, v8::internal::InitializationFlag, bool*, v8::internal::Scope*, int)
+      1    0.3%    0.3%  T v8::internal::Object::GetProperty(v8::internal::LookupIterator*)
+      1    0.3%    0.3%  T v8::internal::Logger::ApiObjectAccess(char const*, v8::internal::JSObject*)
+      1    0.3%    0.3%  T v8::internal::JSFunction::EnsureFeedbackVector(v8::internal::Handle<v8::internal::JSFunction>)
+      1    0.3%    0.3%  T v8::internal::Heap::ReserveSpace(std::__1::vector<v8::internal::Heap::Chunk, std::__1::allocator<v8::internal::Heap::Chunk> >*, std::__1::vector<unsigned char*, std::__1::allocator<unsigned char*> >*)
+      1    0.3%    0.3%  T v8::internal::Factory::CopyJSObjectWithAllocationSite(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::AllocationSite>)
+      1    0.3%    0.3%  T v8::internal::Execution::Call(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)
+      1    0.3%    0.3%  T v8::internal::Dictionary<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::NumberOfEnumerableProperties()
+      1    0.3%    0.3%  T v8::internal::DescriptorArray::Sort()
+      1    0.3%    0.3%  T v8::internal::DefaultDeserializerAllocator::GetMap(unsigned int)
+      1    0.3%    0.3%  T v8::internal::DeclarationScope::AllocateParameterLocals()
+      1    0.3%    0.3%  T v8::internal::CodeStub::GetCode()
+      1    0.3%    0.3%  T v8::internal::Builtins::name(int)
+      1    0.3%    0.3%  T v8::internal::Bitmap::Clear()
+      1    0.3%    0.3%  T v8::internal::AstRawString::Compare(void*, void*)
+      1    0.3%    0.3%  T v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*)
+      1    0.3%    0.3%  T std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >::get()
+      1    0.3%    0.3%  T node::Umask(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.3%    0.3%  T _scanf_l
+      1    0.3%    0.3%  T _munmap
+      1    0.3%    0.3%  T _mach_msg
+      1    0.3%    0.3%  T _free
+      1    0.3%    0.3%  T _fprintf_l
+      1    0.3%    0.3%  T _catgets
+      1    0.3%    0.3%  T _CRYPTO_atomic_add
+
+ [Summary]:
+   ticks  total  nonlib   name
+     69   22.7%   22.9%  JavaScript
+    227   74.7%   75.4%  C++
+     10    3.3%    3.3%  GC
+      3    1.0%          Shared libraries
+      5    1.6%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    147   73.9%   48.4%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     19    9.5%    6.3%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      9    4.5%    3.0%  T v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      7    3.5%    2.3%  T v8::internal::Runtime_CompileForOnStackReplacement(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    1.5%    1.0%  T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.7%  T v8::internal::Runtime_KeyedStoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.7%  T v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.7%  T v8::internal::Runtime_CreateListFromArrayLike(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  t v8::internal::ConsString* v8::internal::String::VisitFlat<v8::Utf8LengthHelper::Visitor>(v8::Utf8LengthHelper::Visitor*, v8::internal::String*, int)
+      1    0.5%    0.3%  t __malloc_initialize
+      1    0.5%    0.3%  T v8::internal::Runtime_StringToNumber(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T v8::internal::Runtime_StringIndexOfUnchecked(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T v8::internal::Runtime_ObjectKeys(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T v8::internal::Runtime_CompleteInobjectSlackTrackingForMap(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T v8::internal::Builtin_JsonParse(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T __simple_dprintf
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     86   28.3%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     86  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     85   98.8%      LazyCompile: ~openSync fs.js:433:18
+     85  100.0%        LazyCompile: ~writeFileSync fs.js:1165:23
+     85  100.0%          LazyCompile: ~runSync /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:5:17
+     85  100.0%            Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:1:11
+      1    1.2%      LazyCompile: ~open fs.js:411:14
+      1  100.0%        LazyCompile: ~go$open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:235:22
+      1  100.0%          LazyCompile: *open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:229:17
+      1  100.0%            LazyCompile: ~WriteStream$open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:206:29
+
+     28    9.2%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     28  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     23   82.1%      LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+     23  100.0%        LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:129:34
+      4   17.4%          Script: ~<anonymous> fs.js:1:11
+      4  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      2    8.7%          Script: ~<anonymous> util.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      2    8.7%          Script: ~<anonymous> internal/process.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      2    8.7%          LazyCompile: ~setupGlobalConsole internal/bootstrap/node.js:356:30
+      2  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      1    4.3%          Script: ~<anonymous> stream.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    4.3%          Script: ~<anonymous> path.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    4.3%          Script: ~<anonymous> internal/worker.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    4.3%          Script: ~<anonymous> internal/modules/cjs/loader.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    4.3%          Script: ~<anonymous> internal/encoding.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    4.3%          Script: ~<anonymous> internal/async_hooks.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    4.3%          Script: ~<anonymous> buffer.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    4.3%          Script: ~<anonymous> assert.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    4.3%          Script: ~<anonymous> _stream_readable.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+      1    4.3%          LazyCompile: ~setupProcessFatal internal/bootstrap/node.js:424:29
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      1    4.3%          LazyCompile: ~setupGlobalVariables internal/bootstrap/node.js:297:32
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      1    4.3%          LazyCompile: ~setupGlobalTimeouts internal/bootstrap/node.js:346:31
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      1    4.3%          LazyCompile: ~createWritableStdioStream internal/process/stdio.js:163:35
+      1  100.0%            LazyCompile: ~getStdout internal/process/stdio.js:21:21
+      5   17.9%      LazyCompile: ~Script vm.js:38:14
+      5  100.0%        LazyCompile: ~createScript vm.js:245:22
+      5  100.0%          LazyCompile: ~runInThisContext vm.js:294:26
+      5  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:663:37
+
+     10    3.3%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+     10  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      9   90.0%      LazyCompile: ~closeSync fs.js:403:19
+      9  100.0%        LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:48:59
+      9  100.0%          LazyCompile: ~writeFileSync fs.js:1165:23
+      9  100.0%            LazyCompile: ~runSync /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:5:17
+      1   10.0%      LazyCompile: ~close fs.js:396:15
+      1  100.0%        LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:37:51
+      1  100.0%          LazyCompile: ~closeFsStream internal/fs/streams.js:179:23
+      1  100.0%            LazyCompile: ~ReadStream._destroy internal/fs/streams.js:168:41
+
+      6    2.0%  T _mprotect
+      2   33.3%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      LazyCompile: ~patch /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/polyfills.js:26:16
+      1  100.0%        LazyCompile: ~patch /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:56:16
+      1  100.0%          Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:1:11
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:663:37
+      1   50.0%      LazyCompile: ~api.forEach.method /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/fs-extra/lib/fs/index.js:58:13
+      1  100.0%        Builtin: ArrayForEach
+      1  100.0%          Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/fs-extra/lib/fs/index.js:1:11
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:663:37
+
+      6    2.0%  Builtin: InterpreterEntryTrampoline
+      1   16.7%    LazyCompile: ~validatePath internal/fs/utils.js:326:22
+      1  100.0%      LazyCompile: ~openSync fs.js:433:18
+      1  100.0%        LazyCompile: ~writeFileSync fs.js:1165:23
+      1  100.0%          LazyCompile: ~runSync /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:5:17
+      1  100.0%            Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:1:11
+      1   16.7%    LazyCompile: ~openSync fs.js:433:18
+      1  100.0%      LazyCompile: ~writeFileSync fs.js:1165:23
+      1  100.0%        LazyCompile: ~runSync /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:5:17
+      1  100.0%          Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:1:11
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:663:37
+      1   16.7%    LazyCompile: ~emitBeforeScript internal/async_hooks.js:340:26
+      1  100.0%      LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+      1   16.7%    LazyCompile: ~destroy internal/streams/destroy.js:4:17
+      1  100.0%      LazyCompile: ~WriteStream._final internal/fs/streams.js:236:40
+      1  100.0%        LazyCompile: ~callFinal _stream_writable.js:611:19
+      1  100.0%          LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+      1   16.7%    LazyCompile: ~WriteStream._write internal/fs/streams.js:261:40
+      1  100.0%      LazyCompile: ~<anonymous> internal/fs/streams.js:268:38
+      1  100.0%        LazyCompile: ~onceWrapper events.js:269:21
+      1  100.0%          LazyCompile: ~emit events.js:140:44
+      1  100.0%            LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:208:53
+      1   16.7%    LazyCompile: *Writable.write _stream_writable.js:268:36
+      1  100.0%      LazyCompile: ~runAsync /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:12:18
+      1  100.0%        Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:1:11
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:663:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:711:37
+
+      5    1.6%  t v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObjectReference**, v8::internal::HeapObject*)
+
+      5    1.6%  UNKNOWN
+      1   20.0%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~WriteStream._write internal/fs/streams.js:261:40
+      1  100.0%        LazyCompile: ~<anonymous> internal/fs/streams.js:268:38
+      1  100.0%          LazyCompile: ~onceWrapper events.js:269:21
+      1  100.0%            LazyCompile: ~emit events.js:140:44
+
+      4    1.3%  t node::fs::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      4  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      3   75.0%      LazyCompile: ~writeSync fs.js:551:19
+      3  100.0%        LazyCompile: ~writeFileSync fs.js:1165:23
+      3  100.0%          LazyCompile: ~runSync /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:5:17
+      3  100.0%            Script: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/fs-extra.js:1:11
+      1   25.0%      LazyCompile: ~write fs.js:506:15
+      1  100.0%        LazyCompile: ~WriteStream._write internal/fs/streams.js:261:40
+      1  100.0%          LazyCompile: ~<anonymous> internal/fs/streams.js:268:38
+      1  100.0%            LazyCompile: ~onceWrapper events.js:269:21
+
+      4    1.3%  T node::fs::NewFSReqWrap(v8::FunctionCallbackInfo<v8::Value> const&)
+      4  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   50.0%      LazyCompile: ~write fs.js:506:15
+      2  100.0%        LazyCompile: ~WriteStream._write internal/fs/streams.js:261:40
+      2  100.0%          LazyCompile: ~<anonymous> internal/fs/streams.js:268:38
+      2  100.0%            LazyCompile: ~onceWrapper events.js:269:21
+      2   50.0%      LazyCompile: ~open fs.js:411:14
+      2  100.0%        LazyCompile: ~go$open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:235:22
+      1   50.0%          LazyCompile: ~open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:229:17
+      1  100.0%            LazyCompile: ~WriteStream$open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:206:29
+      1   50.0%          LazyCompile: *open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:229:17
+      1  100.0%            LazyCompile: ~WriteStream$open /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:206:29
+
+      4    1.3%  Builtin: KeyedLoadIC
+      2   50.0%    LazyCompile: ~pushAsyncIds internal/async_hooks.js:389:22
+      2  100.0%      LazyCompile: ~emitBeforeScript internal/async_hooks.js:340:26
+      2  100.0%        LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+      1   25.0%    LazyCompile: ~validateAsyncId internal/async_hooks.js:117:25
+      1  100.0%      LazyCompile: ~emitAfterScript internal/async_hooks.js:354:25
+      1  100.0%        LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+      1   25.0%    LazyCompile: ~getDefaultTriggerAsyncId internal/async_hooks.js:270:34
+      1  100.0%      LazyCompile: ~nextTick internal/process/next_tick.js:96:20
+      1  100.0%        LazyCompile: ~_destroy internal/streams/destroy.js:32:30
+      1  100.0%          LazyCompile: ~fs.close internal/fs/streams.js:180:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/node_modules/graceful-fs/graceful-fs.js:38:41
+

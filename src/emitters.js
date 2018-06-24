@@ -47,4 +47,3 @@ const run = () => {
 }
 
 run()
-// setInterval(() => {}, 100)

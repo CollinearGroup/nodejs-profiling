@@ -1,95 +1,99 @@
-Statistical profiling result from prof/emitters.isolate.log, (779 ticks, 4 unaccounted, 0 excluded).
+Statistical profiling result from prof/emitters.isolate.log, (705 ticks, 3 unaccounted, 0 excluded).
 
  [Shared libraries]:
    ticks  total  nonlib   name
-      4    0.5%          /usr/lib/system/libsystem_pthread.dylib
+      6    0.9%          /usr/lib/system/libsystem_pthread.dylib
 
  [JavaScript]:
    ticks  total  nonlib   name
-    409   52.5%   52.8%  LazyCompile: *<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:27:30
-    274   35.2%   35.4%  LazyCompile: *<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:10:30
-      2    0.3%    0.3%  Builtin: InterpreterEntryTrampoline
-      1    0.1%    0.1%  LazyCompile: ~pushAsyncIds internal/async_hooks.js:389:22
-      1    0.1%    0.1%  LazyCompile: ~normalizeString path.js:57:25
-      1    0.1%    0.1%  LazyCompile: ~emit events.js:140:44
+    358   50.8%   51.2%  LazyCompile: *<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:27:30
+    255   36.2%   36.5%  LazyCompile: *<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:10:30
+      1    0.1%    0.1%  Stub: CEntryStub
+      1    0.1%    0.1%  LazyCompile: ~shift internal/fixed_queue.js:76:8
       1    0.1%    0.1%  LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+      1    0.1%    0.1%  LazyCompile: ~<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:27:30
+      1    0.1%    0.1%  LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
       1    0.1%    0.1%  Builtin: LoadIC_Uninitialized
+      1    0.1%    0.1%  Builtin: KeyedLoadIC_PolymorphicName
+      1    0.1%    0.1%  Builtin: KeyedLoadIC
+      1    0.1%    0.1%  Builtin: InterpreterEntryTrampoline
       1    0.1%    0.1%  Builtin: Exponentiate
+      1    0.1%    0.1%  Builtin: CompileLazy
+      1    0.1%    0.1%  Builtin: Call_ReceiverIsAny
+      1    0.1%    0.1%  Builtin: CallFunction_ReceiverIsAny
 
  [C++]:
    ticks  total  nonlib   name
-     23    3.0%    3.0%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
-      8    1.0%    1.0%  T _mprotect
-      3    0.4%    0.4%  T _mach_vm_purgable_control
-      2    0.3%    0.3%  t v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObjectReference**, v8::internal::HeapObject*)
-      2    0.3%    0.3%  T v8::internal::Factory::NewFixedArrayWithFiller(v8::internal::Heap::RootListIndex, int, v8::internal::Object*, v8::internal::PretenureFlag)
-      2    0.3%    0.3%  T _catgets
+     21    3.0%    3.0%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.6%    0.6%  T _mprotect
+      3    0.4%    0.4%  t node::GetBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.3%    0.3%  t _szone_malloc_should_clear
       1    0.1%    0.1%  t void v8::internal::BodyDescriptorApply<v8::internal::CallIterateBody, void, v8::internal::Map*, v8::internal::HeapObject*, int, v8::internal::IterateAndScavengePromotedObjectsVisitor*>(v8::internal::InstanceType, v8::internal::Map*, v8::internal::HeapObject*, int, v8::internal::IterateAndScavengePromotedObjectsVisitor*)
-      1    0.1%    0.1%  t v8::internal::compiler::Typer::Visitor::Reduce(v8::internal::compiler::Node*)
-      1    0.1%    0.1%  t v8::internal::compiler::RepresentationSelector::VisitNode(v8::internal::compiler::Node*, v8::internal::compiler::Truncation, v8::internal::compiler::SimplifiedLowering*)
-      1    0.1%    0.1%  t v8::internal::compiler::LoopFinderImpl::SerializeLoop(v8::internal::compiler::LoopTree::Loop*)
-      1    0.1%    0.1%  t v8::internal::compiler::(anonymous namespace)::UpdateInLiveness(v8::internal::interpreter::Bytecode, v8::internal::compiler::BytecodeLivenessState&, v8::internal::interpreter::BytecodeArrayAccessor const&)
-      1    0.1%    0.1%  t v8::internal::Scavenger::EvacuateShortcutCandidate(v8::internal::Map*, v8::internal::HeapObject**, v8::internal::ConsString*, int)
-      1    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseMemberWithNewPrefixesExpression(bool*, bool*)
-      1    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseExpressionOrLabelledStatement(v8::internal::ZoneList<v8::internal::AstRawString const*>*, v8::internal::AllowLabelledFunctionStatement, bool*)
-      1    0.1%    0.1%  t unsigned int v8::internal::StringHasher::HashSequentialString<unsigned char>(unsigned char const*, int, unsigned int)
-      1    0.1%    0.1%  t unsigned int std::__1::__sort3<v8::internal::EnumIndexComparator<v8::internal::NameDictionary>&, v8::base::AtomicElement<v8::internal::Smi*>*>(v8::base::AtomicElement<v8::internal::Smi*>*, v8::base::AtomicElement<v8::internal::Smi*>*, v8::base::AtomicElement<v8::internal::Smi*>*, v8::internal::EnumIndexComparator<v8::internal::NameDictionary>&)
-      1    0.1%    0.1%  t std::__1::__split_buffer<v8::internal::compiler::Node**, v8::internal::RecyclingZoneAllocator<v8::internal::compiler::Node**>&>::push_back(v8::internal::compiler::Node**&&)
-      1    0.1%    0.1%  t node::GetBinding(v8::FunctionCallbackInfo<v8::Value> const&)
-      1    0.1%    0.1%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
-      1    0.1%    0.1%  t _szone_malloc_should_clear
-      1    0.1%    0.1%  t _small_free_list_remove_ptr_no_clear
-      1    0.1%    0.1%  t _getrn
-      1    0.1%    0.1%  T v8::internal::interpreter::ConstantArrayBuilder::CreateReservedEntry()
-      1    0.1%    0.1%  T v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterTransfer(v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*, v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*)
-      1    0.1%    0.1%  T v8::internal::interpreter::BytecodeRegisterOptimizer::GrowRegisterMap(v8::internal::interpreter::Register)
-      1    0.1%    0.1%  T v8::internal::interpreter::BytecodeArrayBuilder::ToBytecodeArray(v8::internal::Isolate*)
-      1    0.1%    0.1%  T v8::internal::interpreter::BytecodeArrayBuilder::CallProperty(v8::internal::interpreter::Register, v8::internal::interpreter::RegisterList, int)
-      1    0.1%    0.1%  T v8::internal::compiler::SourcePositionTable::GetSourcePosition(v8::internal::compiler::Node*) const
-      1    0.1%    0.1%  T v8::internal::compiler::PipelineImpl::SelectInstructions(v8::internal::compiler::Linkage*)
-      1    0.1%    0.1%  T v8::internal::compiler::Node::InsertInput(v8::internal::Zone*, int, v8::internal::compiler::Node*)
-      1    0.1%    0.1%  T v8::internal::compiler::LoadElimination::Reduce(v8::internal::compiler::Node*)
-      1    0.1%    0.1%  T v8::internal::compiler::Linkage::NeedsFrameStateInput(v8::internal::Runtime::FunctionId)
-      1    0.1%    0.1%  T v8::internal::compiler::EffectControlLinearizer::TruncateTaggedPointerToBit(v8::internal::compiler::Node*, v8::internal::compiler::GraphAssemblerLabel<1ul>*)
-      1    0.1%    0.1%  T v8::internal::compiler::DeadCodeElimination::ReduceEffectNode(v8::internal::compiler::Node*)
-      1    0.1%    0.1%  T v8::internal::Zone::New(unsigned long)
-      1    0.1%    0.1%  T v8::internal::StringTable::LookupKey(v8::internal::Isolate*, v8::internal::StringTableKey*)
-      1    0.1%    0.1%  T v8::internal::StringHasher::GetHashField()
-      1    0.1%    0.1%  T v8::internal::Scanner::Scan()
-      1    0.1%    0.1%  T v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
-      1    0.1%    0.1%  T v8::internal::Map::GetOrCreatePrototypeChainValidityCell(v8::internal::Handle<v8::internal::Map>, v8::internal::Isolate*)
-      1    0.1%    0.1%  T v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, bool*, v8::internal::LookupIterator::Configuration)
-      1    0.1%    0.1%  T v8::internal::Factory::NewFunction(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Handle<v8::internal::Object>, v8::internal::PretenureFlag)
-      1    0.1%    0.1%  T v8::internal::CompilationDependencies::Commit(v8::internal::Handle<v8::internal::Code>)
+      1    0.1%    0.1%  t v8::internal::compiler::ScheduleLateNodeVisitor::GetBlockForUse(v8::internal::compiler::Edge)
+      1    0.1%    0.1%  t v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce(v8::internal::compiler::Node*)
+      1    0.1%    0.1%  t v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObjectReference**, v8::internal::HeapObject*)
+      1    0.1%    0.1%  t v8::internal::RegExpCharacterClass::IsTextElement()
+      1    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseVariableDeclarations(v8::internal::ParserBase<v8::internal::Parser>::VariableDeclarationContext, v8::internal::ParserBase<v8::internal::Parser>::DeclarationParsingResult*, v8::internal::ZoneList<v8::internal::AstRawString const*>*, bool*)
+      1    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseMemberExpression(bool*, bool*)
+      1    0.1%    0.1%  t v8::internal::Map::InitializeDescriptors(v8::internal::DescriptorArray*, v8::internal::LayoutDescriptor*)
+      1    0.1%    0.1%  t v8::internal::Handle<v8::internal::FixedArray> v8::internal::Factory::CopyArrayAndGrow<v8::internal::FixedArray>(v8::internal::Handle<v8::internal::FixedArray>, int, v8::internal::PretenureFlag)
+      1    0.1%    0.1%  t v8::internal::(anonymous namespace)::ObjectBoilerplate::Create(v8::internal::Isolate*, v8::internal::Handle<v8::internal::HeapObject>, int, v8::internal::PretenureFlag)
+      1    0.1%    0.1%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      1    0.1%    0.1%  t std::__1::__shared_ptr_pointer<v8::internal::AstValueFactory*, std::__1::default_delete<v8::internal::AstValueFactory>, std::__1::allocator<v8::internal::AstValueFactory> >::__on_zero_shared()
+      1    0.1%    0.1%  t ___vfprintf
+      1    0.1%    0.1%  T void v8::internal::LookupIterator::RestartInternal<false>(v8::internal::LookupIterator::InterceptorState)
+      1    0.1%    0.1%  T v8::internal::compiler::OperatorProperties::HasContextInput(v8::internal::compiler::Operator const*)
+      1    0.1%    0.1%  T v8::internal::compiler::OperationTyper::ToNumberOrNumeric(v8::internal::Object::Conversion, v8::internal::compiler::Type*)
+      1    0.1%    0.1%  T v8::internal::compiler::InstructionSequence::InstructionBlocksFor(v8::internal::Zone*, v8::internal::compiler::Schedule const*)
+      1    0.1%    0.1%  T v8::internal::compiler::InstructionSelector::VisitNode(v8::internal::compiler::Node*)
+      1    0.1%    0.1%  T v8::internal::compiler::GraphReducer::ReduceTop()
+      1    0.1%    0.1%  T v8::internal::compiler::GraphReducer::ReduceNode(v8::internal::compiler::Node*)
+      1    0.1%    0.1%  T v8::internal::compiler::BytecodeLivenessMap::InitializeLiveness(int, int, v8::internal::Zone*)
+      1    0.1%    0.1%  T v8::internal::compiler::BytecodeLivenessMap::GetLiveness(int)
+      1    0.1%    0.1%  T v8::internal::Zone::~Zone()
+      1    0.1%    0.1%  T v8::internal::StubCache::Initialize()
+      1    0.1%    0.1%  T v8::internal::RelocIterator::next()
+      1    0.1%    0.1%  T v8::internal::ParseInfo::function_kind() const
+      1    0.1%    0.1%  T v8::internal::Logger::LogCodeObject(v8::internal::Object*)
+      1    0.1%    0.1%  T v8::internal::FuncNameInferrer::FuncNameInferrer(v8::internal::AstValueFactory*, v8::internal::Zone*)
+      1    0.1%    0.1%  T v8::internal::FeedbackNexus::StateFromFeedback() const
+      1    0.1%    0.1%  T v8::internal::Factory::NewFixedArrayWithFiller(v8::internal::Heap::RootListIndex, int, v8::internal::Object*, v8::internal::PretenureFlag)
+      1    0.1%    0.1%  T v8::internal::DependentCode::New(v8::internal::DependentCode::DependencyGroup, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::DependentCode>)
       1    0.1%    0.1%  T v8::internal::BuiltinDeserializer::ExtractCodeObjectSize(int)
-      1    0.1%    0.1%  T v8::internal::AstValueFactory::GetOneByteStringInternal(v8::internal::Vector<unsigned char const>)
+      1    0.1%    0.1%  T v8::internal::BaseNameDictionary<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::EnsureCapacity(v8::internal::Handle<v8::internal::NameDictionary>, int)
+      1    0.1%    0.1%  T _mach_vm_purgable_control
+      1    0.1%    0.1%  T _mach_vm_allocate
       1    0.1%    0.1%  T _mach_msg
+      1    0.1%    0.1%  T _inet_network
+      1    0.1%    0.1%  T _guarded_open_np
+      1    0.1%    0.1%  T ___rec_search
+      1    0.1%    0.1%  T _CRYPTO_atomic_add
 
  [Summary]:
    ticks  total  nonlib   name
-    691   88.7%   89.2%  JavaScript
-     80   10.3%   10.3%  C++
-      4    0.5%    0.5%  GC
-      4    0.5%          Shared libraries
-      4    0.5%          Unaccounted
+    626   88.8%   89.6%  JavaScript
+     70    9.9%   10.0%  C++
+      4    0.6%    0.6%  GC
+      6    0.9%          Shared libraries
+      3    0.4%          Unaccounted
 
  [C++ entry points]:
    ticks    cpp   total   name
-     24   36.9%    3.1%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
-     12   18.5%    1.5%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
-      7   10.8%    0.9%  T v8::internal::Runtime_CompileForOnStackReplacement(int, v8::internal::Object**, v8::internal::Isolate*)
-      5    7.7%    0.6%  T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
-      4    6.2%    0.5%  T v8::internal::Runtime_CompileOptimized_NotConcurrent(int, v8::internal::Object**, v8::internal::Isolate*)
-      2    3.1%    0.3%  T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
-      2    3.1%    0.3%  T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
-      2    3.1%    0.3%  T v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
-      1    1.5%    0.1%  T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
-      1    1.5%    0.1%  T v8::internal::Runtime_StackGuard(int, v8::internal::Object**, v8::internal::Isolate*)
-      1    1.5%    0.1%  T v8::internal::Runtime_SetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
-      1    1.5%    0.1%  T v8::internal::Runtime_NewClosure_Tenured(int, v8::internal::Object**, v8::internal::Isolate*)
-      1    1.5%    0.1%  T v8::internal::Runtime_MapGrow(int, v8::internal::Object**, v8::internal::Isolate*)
-      1    1.5%    0.1%  T v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
-      1    1.5%    0.1%  T v8::internal::Runtime_DefineClass(int, v8::internal::Object**, v8::internal::Isolate*)
+     23   39.7%    3.3%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      9   15.5%    1.3%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    8.6%    0.7%  T v8::internal::Runtime_CompileForOnStackReplacement(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    6.9%    0.6%  T v8::internal::Runtime_CompileOptimized_NotConcurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    6.9%    0.6%  T v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    3.4%    0.3%  T v8::internal::Runtime_StackGuard(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    3.4%    0.3%  T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    3.4%    0.3%  T v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    0.1%  T v8::internal::Runtime_SetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    0.1%  T v8::internal::Runtime_RegExpInitializeAndCompile(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    0.1%  T v8::internal::Runtime_MapGrow(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    0.1%  T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    0.1%  T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    0.1%  T v8::internal::Runtime_DeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    0.1%  T v8::internal::Builtin_ObjectDefineProperty(int, v8::internal::Object**, v8::internal::Isolate*)
 
  [Bottom up (heavy) profile]:
   Note: percentage shows a share of a particular caller in the total
@@ -97,86 +101,62 @@ Statistical profiling result from prof/emitters.isolate.log, (779 ticks, 4 unacc
   Callers occupying less than 1.0% are not shown.
 
    ticks parent  name
-    409   52.5%  LazyCompile: *<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:27:30
-    198   48.4%    LazyCompile: *emit events.js:140:44
-    198  100.0%      LazyCompile: ~Billy.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:41:19
-    178   89.9%        LazyCompile: *emit events.js:140:44
-    178  100.0%          LazyCompile: ~process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:20:22
-    116   65.2%            LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
-     62   34.8%            LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
-     20   10.1%        LazyCompile: *process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:20:22
-     20  100.0%          LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
-     20  100.0%            LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
-    150   36.7%    LazyCompile: *Billy.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:41:19
-    150  100.0%      LazyCompile: *process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:20:22
-    150  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
-    150  100.0%          LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
-    150  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
-     61   14.9%    LazyCompile: ~emit events.js:140:44
-     61  100.0%      LazyCompile: ~Billy.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:41:19
-     61  100.0%        LazyCompile: ~emit events.js:140:44
-     61  100.0%          LazyCompile: ~process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:20:22
-     61  100.0%            LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+    358   50.8%  LazyCompile: *<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:27:30
+    170   47.5%    LazyCompile: *emit events.js:140:44
+    170  100.0%      LazyCompile: ~Billy.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:41:19
+    143   84.1%        LazyCompile: *emit events.js:140:44
+    143  100.0%          LazyCompile: ~process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:20:22
+     98   68.5%            LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+     45   31.5%            LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
+     27   15.9%        LazyCompile: *process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:20:22
+     27  100.0%          LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
+     27  100.0%            LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
+    147   41.1%    LazyCompile: *Billy.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:41:19
+    147  100.0%      LazyCompile: *process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:20:22
+    147  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
+    147  100.0%          LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
+    147  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+     41   11.5%    LazyCompile: ~Billy.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:41:19
+     41  100.0%      LazyCompile: ~process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:20:22
+     41  100.0%        LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+     41  100.0%          LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
+     41  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
 
-    274   35.2%  LazyCompile: *<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:10:30
-    129   47.1%    LazyCompile: *emit events.js:140:44
-    129  100.0%      LazyCompile: ~Sally.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:38:19
-    103   79.8%        LazyCompile: *emit events.js:140:44
-    103  100.0%          LazyCompile: ~process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:32:22
-     70   68.0%            LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
-     33   32.0%            LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
-     26   20.2%        LazyCompile: *process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:32:22
-     26  100.0%          LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
-     26  100.0%            LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
-    109   39.8%    LazyCompile: *Sally.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:38:19
-    109  100.0%      LazyCompile: *process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:32:22
-    109  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
-    109  100.0%          LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
-    109  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
-     36   13.1%    LazyCompile: ~emit events.js:140:44
-     36  100.0%      LazyCompile: ~Sally.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:38:19
-     36  100.0%        LazyCompile: ~emit events.js:140:44
-     36  100.0%          LazyCompile: ~process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:32:22
-     36  100.0%            LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+    255   36.2%  LazyCompile: *<anonymous> /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:10:30
+    121   47.5%    LazyCompile: *emit events.js:140:44
+    121  100.0%      LazyCompile: ~Sally.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:38:19
+    107   88.4%        LazyCompile: *emit events.js:140:44
+    107  100.0%          LazyCompile: ~process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:32:22
+     67   62.6%            LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+     40   37.4%            LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
+     14   11.6%        LazyCompile: *process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:32:22
+     14  100.0%          LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
+     14  100.0%            LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
+     94   36.9%    LazyCompile: *Sally.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:38:19
+     94  100.0%      LazyCompile: *process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:32:22
+     94  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:41:25
+     94  100.0%          LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
+     94  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+     40   15.7%    LazyCompile: ~Sally.on /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:38:19
+     40  100.0%      LazyCompile: ~process.nextTick /Users/danvilla/Projects/collinear/nodejs-profiling/src/emitters.js:32:22
+     40  100.0%        LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+     40  100.0%          LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:742:26
+     40  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
 
-     23    3.0%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
-     23  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
-     23  100.0%      LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-     23  100.0%        LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:129:34
-      3   13.0%          Script: ~<anonymous> fs.js:1:11
-      3  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      3   13.0%          Script: ~<anonymous> assert.js:1:11
-      3  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      2    8.7%          Script: ~<anonymous> util.js:1:11
-      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      2    8.7%          Script: ~<anonymous> stream.js:1:11
-      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      2    8.7%          LazyCompile: ~startup internal/bootstrap/node.js:29:19
-      2  100.0%            Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:15:30
-      1    4.3%          Script: ~<anonymous> timers.js:1:11
+     21    3.0%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     21  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     21  100.0%      LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+     21  100.0%        LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:129:34
+     12   57.1%          LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
+     12  100.0%            LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:129:34
+      4   19.0%          LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      4  100.0%            Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:15:30
+      2    9.5%          LazyCompile: ~setupGlobalVariables internal/bootstrap/node.js:297:32
+      2  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
+      1    4.8%          Script: ~<anonymous> util.js:1:11
       1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      1    4.3%          Script: ~<anonymous> net.js:1:11
+      1    4.8%          Script: ~<anonymous> internal/encoding.js:1:11
       1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      1    4.3%          Script: ~<anonymous> internal/worker.js:1:11
+      1    4.8%          Script: ~<anonymous> internal/async_hooks.js:1:11
       1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      1    4.3%          Script: ~<anonymous> internal/process.js:1:11
-      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      1    4.3%          Script: ~<anonymous> internal/error-serdes.js:1:11
-      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      1    4.3%          Script: ~<anonymous> internal/async_hooks.js:1:11
-      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      1    4.3%          Script: ~<anonymous> _stream_readable.js:1:11
-      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:222:44
-      1    4.3%          LazyCompile: ~setupGlobalVariables internal/bootstrap/node.js:297:32
-      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
-      1    4.3%          LazyCompile: ~setupGlobalTimeouts internal/bootstrap/node.js:346:31
-      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
-      1    4.3%          LazyCompile: ~setupGlobalConsole internal/bootstrap/node.js:356:30
-      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:29:19
-      1    4.3%          LazyCompile: ~createWritableStdioStream internal/process/stdio.js:163:35
-      1  100.0%            LazyCompile: ~getStdout internal/process/stdio.js:21:21
-
-      8    1.0%  T _mprotect
-      1   12.5%    T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
-      1  100.0%      Script: ~bootstrapInternalLoaders internal/bootstrap/loaders.js:42:35
 

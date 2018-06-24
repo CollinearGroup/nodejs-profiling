@@ -5,7 +5,7 @@ const server = net.createServer(sock => {
     const packages = data.toString().split('\n')
     packages.forEach(package => {
       try {
-        console.log(JSON.parse(package));
+        // console.log(JSON.parse(package));
       } catch (e) {
         // Do nothing
       }

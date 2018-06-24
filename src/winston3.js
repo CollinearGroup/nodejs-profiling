@@ -10,13 +10,12 @@ winston.add(new winston.transports.Console())
 
 const intervalLimit = 100
 let runCount = 0
-const intervalId = setInterval(() => {
-  if (runCount++ > intervalLimit) {
-    clearInterval(intervalId)
-    return
-  }
+while (runCount++ > intervalLimit) {
   const logLimit = 100
-  for (let logCount = 0; logCount < logLimit; logCount++)  {
-    winston.debug(`${logCount}: A new message!`, {word: 'of', truth: 42})
+  for (let logCount = 0; logCount < logLimit; logCount++) {
+    winston.debug(`${logCount}: A new message!`, {
+      word: 'of',
+      truth: 42
+    })
   }
-}, 10)
+}

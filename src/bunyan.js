@@ -7,19 +7,16 @@ const log = bunyan.createLogger({
   }, {
     stream: process.stdout
   }]
-});
+})
 
-// bunyan.add(new bunyan.transports.Console())
-
-const intervalLimit = 100
+const limit = 100
 let runCount = 0
-const intervalId = setInterval(() => {
-  if (runCount++ > intervalLimit) {
-    clearInterval(intervalId)
-    return
-  }
+while (runCount++ < limit) {
   const logLimit = 100
-  for (let logCount = 0; logCount < logLimit; logCount++)  {
-    log.info(`${logCount}: A new message!`, {word: 'of', truth: 42})
+  for (let logCount = 0; logCount < logLimit; logCount++) {
+    log.info(`${logCount}: A new message!`, {
+      word: 'of',
+      truth: 42
+    })
   }
-}, 10)
+}

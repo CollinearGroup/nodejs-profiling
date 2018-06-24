@@ -4,14 +4,16 @@
   "description": "Profiling scripts for educational purposes.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bunyan": "^1.8.12",
+    "fast-safe-stringify": "^2.0.4",
     "fs-extra": "^6.0.1",
     "lodash": "^4.17.10",
+    "logform": "^1.9.0",
     "restify": "^7.0.0",
     "underscore": "^1.9.1",
     "winston": "^3.0.0"

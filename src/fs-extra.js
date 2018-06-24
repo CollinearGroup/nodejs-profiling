@@ -5,7 +5,7 @@ fs.ensureDirSync('.tmp')
 const runSync = () => {
   const syncRunLimit = 1000
   for (let i = 0; i < syncRunLimit; i++) {
-    fs.writeFileSync('testFile.txt', 'The slow brown fox.')
+    fs.writeFileSync('.tmp/testFile.txt', 'The slow brown fox.')
   }
 }
 

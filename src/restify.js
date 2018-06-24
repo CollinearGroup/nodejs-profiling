@@ -3,13 +3,7 @@ let restify = require('restify')
 const server = restify.createServer({
   name: 'ohma-server'
 })
-// v4 which had get_opts
-// server.use(restify.acceptParser(server.acceptable))
-// server.use(restify.bodyParser())
-// server.use(restify.CORS())
-// server.use(restify.gzipResponse())
 
-// v7 which still has get_opts
 server.use(restify.plugins.acceptParser(server.acceptable))
 server.use(restify.plugins.bodyParser())
 server.use(restify.plugins.gzipResponse())
